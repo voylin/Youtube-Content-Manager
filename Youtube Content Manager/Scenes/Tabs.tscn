@@ -1,0 +1,389 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://User Interface/Style/main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/Tabs.gd" type="Script" id=2]
+[ext_resource path="res://User Interface/Style/Fonts/Raw/Kalam-Bold.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+font_data = ExtResource( 3 )
+
+[node name="Tabs" type="Tabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_right = -10.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 5.0
+margin_right = -10.0
+margin_bottom = -5.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 546.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 490.0
+margin_bottom = 546.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_right = 490.0
+margin_bottom = 41.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 65.0
+margin_bottom = 36.0
+text = "Name: "
+
+[node name="Name" type="LineEdit" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 69.0
+margin_right = 490.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 45.0
+margin_right = 490.0
+margin_bottom = 86.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 77.0
+margin_bottom = 36.0
+text = "Thumb: "
+
+[node name="Thumb" type="LineEdit" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer2"]
+margin_left = 81.0
+margin_right = 490.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 90.0
+margin_right = 490.0
+margin_bottom = 131.0
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer3"]
+margin_top = 5.0
+margin_right = 79.0
+margin_bottom = 36.0
+text = "Playlist: "
+
+[node name="Playlist" type="LineEdit" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer3"]
+margin_left = 83.0
+margin_right = 490.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 135.0
+margin_right = 490.0
+margin_bottom = 166.0
+text = "Description:"
+
+[node name="Description" type="TextEdit" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 170.0
+margin_right = 490.0
+margin_bottom = 271.0
+size_flags_vertical = 3
+wrap_enabled = true
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 275.0
+margin_right = 490.0
+margin_bottom = 306.0
+text = "Tags:"
+
+[node name="Tags" type="TextEdit" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 310.0
+margin_right = 490.0
+margin_bottom = 411.0
+size_flags_vertical = 3
+wrap_enabled = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 415.0
+margin_right = 490.0
+margin_bottom = 456.0
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer4"]
+margin_top = 5.0
+margin_right = 59.0
+margin_bottom = 36.0
+text = "Cards:"
+
+[node name="Cards" type="LineEdit" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer4"]
+margin_left = 63.0
+margin_right = 490.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 460.0
+margin_right = 490.0
+margin_bottom = 501.0
+
+[node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer5"]
+margin_top = 5.0
+margin_right = 103.0
+margin_bottom = 36.0
+text = "Endscreen:"
+
+[node name="Endscreen" type="LineEdit" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer5"]
+margin_left = 107.0
+margin_right = 490.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 505.0
+margin_right = 490.0
+margin_bottom = 546.0
+
+[node name="Label8" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer6"]
+margin_top = 5.0
+margin_right = 85.0
+margin_bottom = 36.0
+text = "Finished:"
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer6"]
+margin_left = 89.0
+margin_right = 105.0
+margin_bottom = 41.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/hover_pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+
+[node name="Label9" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer6"]
+margin_left = 109.0
+margin_top = 5.0
+margin_right = 228.0
+margin_bottom = 36.0
+text = "Upload date:"
+
+[node name="Upload_Date" type="LineEdit" parent="VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer6"]
+margin_left = 232.0
+margin_right = 490.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 494.0
+margin_right = 984.0
+margin_bottom = 546.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label10" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+margin_right = 490.0
+margin_bottom = 31.0
+text = "Storyboard:"
+
+[node name="Storyboard" type="TextEdit" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+margin_top = 35.0
+margin_right = 490.0
+margin_bottom = 546.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+wrap_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 550.0
+margin_right = 984.0
+margin_bottom = 590.0
+size_flags_horizontal = 3
+
+[node name="SaveButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_right = 325.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="CloseButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 329.0
+margin_right = 654.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+text = "Close"
+
+[node name="DeleteButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 658.0
+margin_right = 984.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+text = "Delete"
+
+[node name="Delete_Window" type="ColorRect" parent="."]
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.5
+margin_top = -69.0
+margin_right = 205.5
+margin_bottom = 69.0
+color = Color( 0.356863, 0.356863, 0.356863, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Delete_Window"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="VSplitContainer3" type="VSplitContainer" parent="Delete_Window/VBoxContainer"]
+margin_right = 381.0
+margin_bottom = 17.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Delete_Window/VBoxContainer"]
+margin_top = 21.0
+margin_right = 381.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 7 )
+text = "Do you really want to delete this script?"
+align = 1
+autowrap = true
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Delete_Window/VBoxContainer"]
+margin_top = 58.0
+margin_right = 381.0
+margin_bottom = 75.0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Delete_Window/VBoxContainer"]
+margin_top = 79.0
+margin_right = 381.0
+margin_bottom = 116.0
+alignment = 1
+
+[node name="Yes_button" type="Button" parent="Delete_Window/VBoxContainer/HBoxContainer"]
+margin_right = 188.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "Yes"
+
+[node name="No_button" type="Button" parent="Delete_Window/VBoxContainer/HBoxContainer"]
+margin_left = 192.0
+margin_right = 381.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "No"
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="Delete_Window/VBoxContainer"]
+margin_top = 120.0
+margin_right = 381.0
+margin_bottom = 138.0
+size_flags_vertical = 3
+
+[node name="Close_Window" type="ColorRect" parent="."]
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.5
+margin_top = -69.0
+margin_right = 205.5
+margin_bottom = 69.0
+color = Color( 0.356863, 0.356863, 0.356863, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Close_Window"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="VSplitContainer3" type="VSplitContainer" parent="Close_Window/VBoxContainer"]
+margin_right = 381.0
+margin_bottom = 17.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Close_Window/VBoxContainer"]
+margin_top = 21.0
+margin_right = 381.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 7 )
+text = "Do you want to close without saving?"
+align = 1
+autowrap = true
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Close_Window/VBoxContainer"]
+margin_top = 58.0
+margin_right = 381.0
+margin_bottom = 75.0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Close_Window/VBoxContainer"]
+margin_top = 79.0
+margin_right = 381.0
+margin_bottom = 116.0
+alignment = 1
+
+[node name="Yes_button" type="Button" parent="Close_Window/VBoxContainer/HBoxContainer"]
+margin_right = 188.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "Yes"
+
+[node name="No_button" type="Button" parent="Close_Window/VBoxContainer/HBoxContainer"]
+margin_left = 192.0
+margin_right = 381.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "No"
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="Close_Window/VBoxContainer"]
+margin_top = 120.0
+margin_right = 381.0
+margin_bottom = 138.0
+size_flags_vertical = 3
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/SaveButton" to="." method="save_button"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CloseButton" to="." method="close_menu" binds= [ true ]]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/DeleteButton" to="." method="delete_menu" binds= [ true ]]
+[connection signal="pressed" from="Delete_Window/VBoxContainer/HBoxContainer/Yes_button" to="." method="delete_button"]
+[connection signal="pressed" from="Delete_Window/VBoxContainer/HBoxContainer/Yes_button" to="." method="close_button"]
+[connection signal="pressed" from="Delete_Window/VBoxContainer/HBoxContainer/No_button" to="." method="delete_menu" binds= [ false ]]
+[connection signal="pressed" from="Close_Window/VBoxContainer/HBoxContainer/Yes_button" to="." method="save_button"]
+[connection signal="pressed" from="Close_Window/VBoxContainer/HBoxContainer/Yes_button" to="." method="close_button"]
+[connection signal="pressed" from="Close_Window/VBoxContainer/HBoxContainer/No_button" to="." method="close_button"]
