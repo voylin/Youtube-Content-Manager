@@ -32,16 +32,20 @@ func open_tab_selector(value = false):
 				if file == "": break
 				elif not file.begins_with(".") and not file in tabs:
 					files[folder].append(file)
+		files["wip"].sort()
+		files["finished"].sort()
 		for file in files["finished"]:
 			var button = Button.new()
 			button.name = file
 			button.text = file
+			button.align = Button.ALIGN_LEFT
 			button.connect("pressed", self, "open_tab", [file]) 
 			$Tab_Selector/VBoxContainer/HBoxContainer2/ScrollContainer2/Finished_Container.add_child(button)
 		for file in files["wip"]:
 			var button = Button.new()
 			button.name = file
 			button.text = file
+			button.align = Button.ALIGN_LEFT
 			button.connect("pressed", self, "open_tab", [file])
 			$Tab_Selector/VBoxContainer/HBoxContainer2/ScrollContainer/WIP_Container.add_child(button)
 	else:

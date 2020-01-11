@@ -23,15 +23,27 @@ margin_right = -10.0
 margin_bottom = -4.0
 custom_constants/separation = 5
 
-[node name="Open_Tab_Button" type="Button" parent="VBox"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox"]
 margin_right = 1004.0
-margin_bottom = 37.0
+margin_bottom = 40.0
+
+[node name="Open_Tab_Button" type="Button" parent="VBox/HBoxContainer"]
+margin_right = 500.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 0, 30 )
 size_flags_horizontal = 3
 text = "Open"
 
+[node name="Button3" type="Button" parent="VBox/HBoxContainer"]
+margin_left = 504.0
+margin_right = 1004.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+text = "Add new"
+
 [node name="TabContainer" type="TabContainer" parent="VBox"]
-margin_top = 42.0
+margin_top = 45.0
 margin_right = 1004.0
 margin_bottom = 592.0
 size_flags_horizontal = 3
@@ -125,6 +137,7 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 size_flags_horizontal = 3
 text = "Close"
-[connection signal="pressed" from="VBox/Open_Tab_Button" to="." method="open_tab_selector" binds= [ true ]]
+[connection signal="pressed" from="VBox/HBoxContainer/Open_Tab_Button" to="." method="open_tab_selector" binds= [ true ]]
+[connection signal="pressed" from="VBox/HBoxContainer/Button3" to="." method="open_tab" binds= [ "new" ]]
 [connection signal="pressed" from="Tab_Selector/VBoxContainer/HBoxContainer3/Button" to="." method="open_tab" binds= [ "new" ]]
 [connection signal="pressed" from="Tab_Selector/VBoxContainer/HBoxContainer3/Button2" to="." method="open_tab_selector" binds= [ false ]]
