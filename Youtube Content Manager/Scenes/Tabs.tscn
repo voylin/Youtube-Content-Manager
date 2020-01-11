@@ -37,6 +37,7 @@ theme = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -378,6 +379,58 @@ margin_top = 120.0
 margin_right = 381.0
 margin_bottom = 138.0
 size_flags_vertical = 3
+
+[node name="Error_Window" type="ColorRect" parent="."]
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.5
+margin_top = -78.5
+margin_right = 205.5
+margin_bottom = 78.5
+color = Color( 0.356863, 0.356863, 0.356863, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Error_Window"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="VSplitContainer3" type="VSplitContainer" parent="Error_Window/VBoxContainer"]
+margin_right = 381.0
+margin_bottom = 11.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Error_Window/VBoxContainer"]
+margin_top = 15.0
+margin_right = 381.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 7 )
+text = "You can not use these characters in the name: . : @ / \""
+align = 1
+autowrap = true
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Error_Window/VBoxContainer"]
+margin_top = 88.0
+margin_right = 381.0
+margin_bottom = 99.0
+size_flags_vertical = 3
+
+[node name="Ok_button" type="Button" parent="Error_Window/VBoxContainer"]
+margin_top = 103.0
+margin_right = 381.0
+margin_bottom = 140.0
+size_flags_horizontal = 3
+text = "Ok"
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="Error_Window/VBoxContainer"]
+margin_top = 144.0
+margin_right = 381.0
+margin_bottom = 157.0
+size_flags_vertical = 3
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/SaveButton" to="." method="save_button"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/CloseButton" to="." method="close_menu" binds= [ true ]]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/DeleteButton" to="." method="delete_menu" binds= [ true ]]
@@ -387,3 +440,4 @@ size_flags_vertical = 3
 [connection signal="pressed" from="Close_Window/VBoxContainer/HBoxContainer/Yes_button" to="." method="save_button"]
 [connection signal="pressed" from="Close_Window/VBoxContainer/HBoxContainer/Yes_button" to="." method="close_button"]
 [connection signal="pressed" from="Close_Window/VBoxContainer/HBoxContainer/No_button" to="." method="close_button"]
+[connection signal="pressed" from="Error_Window/VBoxContainer/Ok_button" to="." method="error_window_close"]

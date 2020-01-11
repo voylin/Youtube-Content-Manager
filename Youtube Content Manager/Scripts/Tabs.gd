@@ -20,10 +20,16 @@ func _ready():
 		load_data()
 	$Delete_Window.visible = false
 	$Close_Window.visible = false
+	$Error_Window.visible = false
 
 func save_button():
 	#### Setting variables in file_data according to the field
 	var name = $VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer/Name.text
+	for character in ['.',':','@','/','"']:
+		if character in name:
+			$Error_Window.visible = true
+			pass
+	
 	var done = $VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer6/CheckBox.pressed 
 	if (done != file_data["finished"]) and self.name != "new":
 		delete_button()
@@ -51,6 +57,9 @@ func save_button():
 	file.open(location, File.WRITE)
 	file.store_line(to_json(file_data))
 	file.close()
+
+func error_window_close():
+	$Error_Window.visible = false
 
 func load_data():
 	check_location(self.name)
