@@ -10,6 +10,21 @@ func _ready():
 	if !dir.dir_exists("user://wip"):
 		dir.make_dir("user://wip")
 
+var key_pressed = false
+func _input(event):
+	if $VBox/TabContainer.get_child_count() != 0:
+		if Input.is_action_pressed("Save"):
+			$VBox/TabContainer.get_child($VBox/TabContainer.current_tab).save_button()
+			key_pressed = true
+		elif Input.is_action_pressed("Close"):
+			$VBox/TabContainer.get_child($VBox/TabContainer.current_tab).close_menu(true)
+			key_pressed = true
+		elif Input.is_action_pressed("Delete"):
+			$VBox/TabContainer.get_child($VBox/TabContainer.current_tab).delete_menu(true)
+			key_pressed = true
+		else:
+			key_pressed = false
+
 func open_tab_selector(value = false):
 	if value:
 		for child in $Tab_Selector/VBoxContainer/HBoxContainer2/ScrollContainer/WIP_Container.get_children():
