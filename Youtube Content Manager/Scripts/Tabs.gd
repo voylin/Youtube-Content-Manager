@@ -105,6 +105,9 @@ func close_menu(value):
 	else:
 		close_button()
 
+func close_close_menu():
+	$Close_Window.visible = false
+
 func delete_button():
 	if location != null: 
 		var dir = Directory.new()
