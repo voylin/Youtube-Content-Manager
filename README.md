@@ -3,7 +3,7 @@ Just a simple program to keep track of all scripts I'm making for my youtube vid
 
 Whileediting a script you can use these commands:
 CTLR + S = Save
-CTRL + C = Close
+CTRL + SHIFT + C = Close
 CTRL + D = Delete
 
 
